@@ -3,6 +3,7 @@ This repository contains the files to build and control a low-cost robot arm tha
 This robot arm uses Dynamixel XL430 and Dynamixel XL330 servo motors. The XL430 motors are almost twice as strong and are used for the first two joints.
 The XL330 motors are weaker but weigh only 18g each. This makes the arm very lightweight and fast.
 Dynamixel sells the U2D2 adapter to connect the servos to a computer. However, this is very expensive and the latency is very high. This build uses another cheaper adapter board instead.
+The robot arm can be controlled with the Dynamixel SDK: ```pip install dynamixel-sdk```
 
 ![Robot Arm](./pictures/robot_portrait.jpg)
 
