@@ -37,8 +37,8 @@ Video of the assembly: https://youtu.be/RckrXOEoWrk
 8. Connect the output of the voltage reducer and the remaining D port of the driver board to the elbow servo
 6. Connect the driver board to the power supply
 7. Connect the driver board to a computer (should work with Linux and macOS)
-8. Figure out device name (e.g. /dev/tty.usbmodem57380045631) ```ls /dev/tty.*```
-9. Scan device with [Dynamixel Wizard](https://emanual.robotis.com/docs/en/software/dynamixel/dynamixel_wizard2/)
+8. Figure out the device name (e.g. /dev/tty.usbmodem57380045631) ```ls /dev/tty.*```
+9. Scan the device with [Dynamixel Wizard](https://emanual.robotis.com/docs/en/software/dynamixel/dynamixel_wizard2/)
 10. Connect to an XL330 servo and view the input voltage. Adjust the screw on the voltage reducer until the input voltage is 5V.
 10. Set the servo ids to 1 for the shoulder to 5 for the gripper servo
 11. Set the baudrate to 1M for all servos.
@@ -56,7 +56,7 @@ Video of the assembly: https://youtu.be/RckrXOEoWrk
 
 ![leader](./pictures/leader_arm.png)
 
-The assembly of the leader arm is simpler since all motors use 5v.
+The assembly of the leader arm is simpler since all motors use 5v. The gripper is replace by a handle and a trigger. During use, a small torque can be applied to the trigger so that it opens by default. The GELLO design uses a spring for this purpose but it is much more difficult to assemble.
 The teleoperation.py script can be used to test the arms. However, the device names might have to be adjusted.
 
 
