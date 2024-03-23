@@ -21,12 +21,12 @@ The robot arm can be controlled with the Dynamixel SDK: ```pip install dynamixel
 | Table Clamp                   | $6   | https://a.co/d/4KEiYdV |
 | Wires                         | $7   | https://a.co/d/hQfk2cb|
 
-There is usually a 10% discount code for the robotis shop. It might also help to add some grip tape to the gripper (e.g. https://a.co/d/dW7BnEN). A USB-C cable is nessesary to connect the servos to a computer.
+There is usually a 10% discount code for the robotis shop. It might also help to add some grip tape to the gripper (e.g. https://a.co/d/dW7BnEN). A USB-C cable is nessesary to connect the servo driver board to a computer.
 ![follower](./pictures/follower_arm.png)
 
 ## Assembly
 Video of the assembly: https://youtu.be/RckrXOEoWrk
-1. Print all parts
+1. Print all parts with a 3D printer. The STL files are in hardware/follower/stl. The parts are designed to be easy to print. Only the moving part of the gripper needs supports.
 2. Assemble the arm without the base
 3. Solder wires onto voltage reducer. Input should be connected to female connectors and the output to male connectors.
 4. Screw the voltage reducer and the servo driver board onto the base
