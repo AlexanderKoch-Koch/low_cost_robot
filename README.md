@@ -27,7 +27,7 @@ There is usually a 10% discount code for the robotis shop. It might also help to
 ## Assembly
 Video of the assembly: https://youtu.be/RckrXOEoWrk
 1. Print all parts with a 3D printer. The STL files are in hardware/follower/stl. The parts are designed to be easy to print. Only the moving part of the gripper needs supports.
-2. Assemble the arm without the base
+2. Assemble the arm without the base. Make sure that the servos are fixed in the same position as in the CAD. The servo horn should be in the default position when screwed in.
 3. Solder wires onto voltage reducer. Input should be connected to female connectors and the output to male connectors.
 4. Screw the voltage reducer and the servo driver board onto the base
 5. Screw the base onto the arm
