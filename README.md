@@ -9,17 +9,17 @@ The robot arm can be controlled with the Dynamixel SDK: ```pip install dynamixel
 
 ## Follower Arm
 ### Required Materials
-| Part                          | Cost | Buying link | Specs | 
-|-------------------------------|------| --- | --- |
+| Part                          | Cost | Buying link                                    | Specs | 
+|-------------------------------|------|------------------------------------------------| --- |
 | 2x Dynamixel xl430-w250       | $100 | https://www.robotis.us/dynamixel-xl430-w250-t/ | https://emanual.robotis.com/docs/en/dxl/x/xl430-w250/ |
-| 3x Dynamixel xl330-w280       | $72  |  https://www.robotis.us/dynamixel-xl330-m077-t/ | https://emanual.robotis.com/docs/en/dxl/x/xl330-m288/|
-| XL330 Idler Wheel             | $10  |  https://www.robotis.us/fpx330-h101-4pcs-set/ | |
-| XL430 Idler Wheel             | $7   | https://www.robotis.us/hn11-i101-set/ | |
-| Serial bus servo driver board | $10  | https://a.co/d/7C3RUYU |
-| Voltage Reducer               | $4   | https://a.co/d/iWJlp6A |
-| 12V Power Supply              | $12  | https://a.co/d/40o8uMN |
-| Table Clamp                   | $6   | https://a.co/d/4KEiYdV |
-| Wires                         | $7   | https://a.co/d/hQfk2cb|
+| 3x Dynamixel xl330-m288       | $72  | https://www.robotis.us/dynamixel-xl330-m288-t/ | https://emanual.robotis.com/docs/en/dxl/x/xl330-m288/|
+| XL330 Idler Wheel             | $10  | https://www.robotis.us/fpx330-h101-4pcs-set/   | |
+| XL430 Idler Wheel             | $7   | https://www.robotis.us/hn11-i101-set/          | |
+| Serial bus servo driver board | $10  | https://a.co/d/7C3RUYU                         |
+| Voltage Reducer               | $4   | https://a.co/d/iWJlp6A                         |
+| 12V Power Supply              | $12  | https://a.co/d/40o8uMN                         |
+| Table Clamp                   | $6   | https://a.co/d/4KEiYdV                         |
+| Wires                         | $7   | https://a.co/d/hQfk2cb                         |
 
 There is usually a 10% discount code for the robotis shop. It might also help to add some grip tape to the gripper (e.g. https://a.co/d/dW7BnEN). A USB-C cable is nessesary to connect the servo driver board to a computer.
 ![follower](./pictures/follower_arm.png)
