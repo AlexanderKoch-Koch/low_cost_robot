@@ -5,7 +5,7 @@ The XL330 motors are weaker but weigh only 18g each. This makes the arm very lig
 Dynamixel sells the U2D2 adapter to connect the servos to a computer. However, this is very expensive and the latency is very high. This build uses another cheaper adapter board instead.
 The robot arm can be controlled with the Dynamixel SDK: ```pip install dynamixel-sdk```
 
-![Robot Arm](./pictures/robot_portrait.jpg)
+![Robot Arm](./pictures/robot_portait.jpg)
 
 ## Follower Arm
 ### Required Materials
