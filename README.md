@@ -1,5 +1,5 @@
-# $200 Robot Arm
-This repository contains the files to build and control a low-cost robot arm that costs about $200. You can also build a second robot arm (the leader arm) to control the other arm (the follower arm). The design of the leader is inspired by the [GELLO project](https://github.com/wuphilipp/gello_mechanical) but is simpler to build.
+# $250 Robot Arm
+This repository contains the files to build and control a low-cost robot arm that costs about $250. You can also build a second robot arm (the leader arm) to control the other arm (the follower arm). The design of the leader is inspired by the [GELLO project](https://github.com/wuphilipp/gello_mechanical) but is simpler to build.
 This robot arm uses Dynamixel XL430 and Dynamixel XL330 servo motors. The XL430 motors are almost twice as strong and are used for the first two joints.
 The XL330 motors are weaker but weigh only 18g each. This makes the arm very lightweight and fast.
 Dynamixel sells the U2D2 adapter to connect the servos to a computer. However, this is very expensive and the latency is very high. This build uses another cheaper adapter board instead.
@@ -12,7 +12,7 @@ The robot arm can be controlled with the Dynamixel SDK: ```pip install dynamixel
 | Part                          | Cost | Buying link                                    | Specs | 
 |-------------------------------|------|------------------------------------------------| --- |
 | 2x Dynamixel xl430-w250       | $100 | https://www.robotis.us/dynamixel-xl430-w250-t/ | https://emanual.robotis.com/docs/en/dxl/x/xl430-w250/ |
-| 3x Dynamixel xl330-m288       | $72  | https://www.robotis.us/dynamixel-xl330-m288-t/ | https://emanual.robotis.com/docs/en/dxl/x/xl330-m288/|
+| 4x Dynamixel xl330-m288       | $96  | https://www.robotis.us/dynamixel-xl330-m288-t/ | https://emanual.robotis.com/docs/en/dxl/x/xl330-m288/|
 | XL330 Idler Wheel             | $10  | https://www.robotis.us/fpx330-h101-4pcs-set/   | |
 | XL430 Idler Wheel             | $7   | https://www.robotis.us/hn11-i101-set/          | |
 | Serial bus servo driver board | $10  | https://a.co/d/7C3RUYU                         |
@@ -47,11 +47,11 @@ Video of the assembly: https://youtu.be/RckrXOEoWrk
 ### Required Materials
 | Part                          | Cost | Buying link | Specs | 
 |-------------------------------|------| --- | --- |
-| 5x Dynamixel xl330-w077       | $120 |  https://www.robotis.us/dynamixel-xl330-m077-t/ | https://emanual.robotis.com/docs/en/dxl/x/xl330-m077/|
+| 6x Dynamixel xl330-w077       | $144 |  https://www.robotis.us/dynamixel-xl330-m077-t/ | https://emanual.robotis.com/docs/en/dxl/x/xl330-m077/|
 | Serial bus servo driver board | $10  | https://a.co/d/7C3RUYU |
 | 5v Power Supply               | $6   | https://a.co/d/5u90NVp |
 | Table Clamp                   | $6   | https://a.co/d/4KEiYdV |
-| XL330 Frame | $7 | https://www.robotis.us/fpx330-s101-4pcs-set/ | | 
+| XL330 Frame | $7   | https://www.robotis.us/fpx330-s101-4pcs-set/ | | 
 
 
 ![leader](./pictures/leader_arm.png)
