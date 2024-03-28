@@ -21,7 +21,7 @@ The robot arm can be controlled with the Dynamixel SDK: ```pip install dynamixel
 | Table Clamp                   | $6   | https://a.co/d/4KEiYdV                         |
 | Wires                         | $7   | https://a.co/d/hQfk2cb                         |
 
-There is usually a 10% discount code for the robotis shop. It might also help to add some grip tape to the gripper (e.g. https://a.co/d/dW7BnEN). A USB-C cable is nessesary to connect the servo driver board to a computer.
+There is usually a 10% discount code for the robotis shop. It might also help to add some grip tape to the gripper (e.g. https://a.co/d/dW7BnEN). A USB-C cable is necessary to connect the servo driver board to a computer.
 ![follower](./pictures/follower_arm.png)
 
 ## Assembly
