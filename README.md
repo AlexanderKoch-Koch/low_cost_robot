@@ -1,5 +1,6 @@
 # $250 Robot Arm
 This repository contains the files to build and control a low-cost robot arm that costs about $250. You can also build a second robot arm (the leader arm) to control the other arm (the follower arm). The design of the leader is inspired by the [GELLO project](https://github.com/wuphilipp/gello_mechanical) but is simpler to build. Such a robot arm is well suited for robot learning (e.g. https://x.com/alexkoch_ai/status/1756500716854841835?s=20). Two of those arms are also capable of folding clothes (https://x.com/alexkoch_ai/status/1772750496174149708?s=20).
+
 This robot arm uses Dynamixel XL430 and Dynamixel XL330 servo motors. The XL430 motors are almost twice as strong and are used for the first two joints.
 The XL330 motors are weaker but weigh only 18g each. This makes the arm very lightweight and fast.
 Dynamixel sells the U2D2 adapter to connect the servos to a computer. However, this is very expensive and the latency is very high. This build uses another cheaper adapter board instead.
