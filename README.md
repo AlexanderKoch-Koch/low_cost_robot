@@ -40,8 +40,8 @@ Video of the assembly: https://youtu.be/RckrXOEoWrk
    1. Connect the driver board to a computer (should work with Linux and macOS)
    2. Figure out the device name (e.g. /dev/tty.usbmodem57380045631 for MacOS): ```ls /dev/tty.*```
    3. Scan each motor individually with [Dynamixel Wizard](https://emanual.robotis.com/docs/en/software/dynamixel/dynamixel_wizard2/)
-   4. Set the baudrate to 1M for all motors
-   5. Set the servo ids to 1 for the shoulder to 5 (6 if using the elbow to write extension) for the gripper servo
+      1. Set the baudrate to 1M for all motors
+      2. Set the servo ids to 1 for the shoulder to 5 (6 if using the elbow to write extension) for the gripper servo
 3. Assembly
    1. Assemble the arm without the base
       1. Make sure that the servos are fixed in the same position as in the CAD
@@ -54,7 +54,7 @@ Video of the assembly: https://youtu.be/RckrXOEoWrk
    7. Connect the input for the voltage reducer to V and G ports on the driver board
    8. Connect the output of the voltage reducer and the remaining D port of the driver board to the elbow servo
    9. Connect the driver board to the power supply
-   10. Connect to an XL330 servo and view the input voltage, then adjust the screw on the voltage reducer until the input voltage is 5V.
+   10. Connect to an XL330 servo and view the input voltage, then adjust the screw on the voltage reducer until the input voltage is 5V
 
 ## Leader Arm
 
