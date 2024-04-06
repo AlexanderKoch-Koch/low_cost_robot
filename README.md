@@ -33,22 +33,28 @@ There is usually a 10% discount code for the robotis shop. It might also help to
 
 Video of the assembly: https://youtu.be/RckrXOEoWrk
 
-1. Print all parts with a 3D printer. The STL files are in hardware/follower/stl. The parts are designed to be easy to print. Only the moving part of the gripper needs supports.
-2. Assemble the arm without the base. Make sure that the servos are fixed in the same position as in the CAD. The servo horn should be in the default position when screwed in.
-3. Solder wires onto voltage reducer. Input should be connected to female connectors and the output to male connectors.
-4. Screw the voltage reducer and the servo driver board onto the base
-5. Screw the base onto the arm
-6. Connect D, V, and G ports on the driver board to the shoulder rotation servo
-7. Connect the shoulder rotation servo to the shoulder lift servo
-8. Connect the input for the voltage reducer to V and G ports on the driver board
-9. Connect the output of the voltage reducer and the remaining D port of the driver board to the elbow servo
-10. Connect the driver board to the power supply
-11. Connect the driver board to a computer (should work with Linux and macOS)
-12. Figure out the device name (e.g. /dev/tty.usbmodem57380045631) ```ls /dev/tty.*```
-13. Scan the device with [Dynamixel Wizard](https://emanual.robotis.com/docs/en/software/dynamixel/dynamixel_wizard2/)
-14. Connect to an XL330 servo and view the input voltage. Adjust the screw on the voltage reducer until the input voltage is 5V.
-15. Set the servo ids to 1 for the shoulder to 5 for the gripper servo
-16. Set the baudrate to 1M for all servos.
+1. Print all parts with a 3D printer
+   1. The STL files are in `hardware/follower/stl`
+   2. The parts are designed to be easy to print; only the moving part of the gripper needs supports
+2. Scanning motors
+   1. Connect the driver board to a computer (should work with Linux and macOS)
+   2. Figure out the device name (e.g. /dev/tty.usbmodem57380045631 for MacOS): ```ls /dev/tty.*```
+   3. Scan each motor individually with [Dynamixel Wizard](https://emanual.robotis.com/docs/en/software/dynamixel/dynamixel_wizard2/)
+   4. Set the baudrate to 1M for all motors
+   5. Set the servo ids to 1 for the shoulder to 5 (6 if using the elbow to write extension) for the gripper servo
+3. Assembly
+   1. Assemble the arm without the base
+      1. Make sure that the servos are fixed in the same position as in the CAD
+      2. The servo horn should be in the default position when screwed in
+   2. Solder wires onto voltage reducer; nput should be connected to female connectors and the output to male connectors
+   3. Screw the voltage reducer and the servo driver board onto the base
+   4. Screw the base onto the arm
+   5. Connect D, V, and G ports on the driver board to the shoulder rotation servo
+   6. Connect the shoulder rotation servo to the shoulder lift servo
+   7. Connect the input for the voltage reducer to V and G ports on the driver board
+   8. Connect the output of the voltage reducer and the remaining D port of the driver board to the elbow servo
+   9. Connect the driver board to the power supply
+   10. Connect to an XL330 servo and view the input voltage, then adjust the screw on the voltage reducer until the input voltage is 5V.
 
 ## Leader Arm
 
@@ -66,5 +72,5 @@ Video of the assembly: https://youtu.be/RckrXOEoWrk
 
 ![leader](./pictures/leader_arm.png)
 
-The assembly of the leader arm is simpler since all motors use 5v. The gripper is replace by a handle and a trigger. During use, a small torque can be applied to the trigger so that it opens by default. The GELLO design uses a spring for this purpose but it is much more difficult to assemble.
+The assembly of the leader arm is simpler since all motors use 5V. The gripper is replace by a handle and a trigger. During use, a small torque can be applied to the trigger so that it opens by default. The GELLO design uses a spring for this purpose but it is much more difficult to assemble.
 The teleoperation.py script can be used to test the arms. However, the device names might have to be adjusted.
