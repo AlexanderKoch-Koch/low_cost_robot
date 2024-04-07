@@ -301,7 +301,7 @@ class Dynamixel:
 if __name__ == "__main__":
     dynamixel = Dynamixel.Config(
         baudrate=1_000_000,
-        device_name='/dev/tty.usbmodem575E0031681'
+        device_name='/dev/tty.usbmodem57380045631'
     ).instantiate()
     motor_id = 1
     pos = dynamixel.read_position(motor_id)
