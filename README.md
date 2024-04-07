@@ -15,21 +15,22 @@ The robot arm can be controlled with the Dynamixel SDK: ```pip install dynamixel
 
 | Part                          | Cost | Buying link                                    | Specs |
 |-------------------------------|------|------------------------------------------------| --- |
-| 2x Dynamixel xl430-w250       | $100 | https://www.robotis.us/dynamixel-xl430-w250-t/ | https://emanual.robotis.com/docs/en/dxl/x/xl430-w250/ |
-| 4x Dynamixel xl330-m288       | $96  | https://www.robotis.us/dynamixel-xl330-m288-t/ | https://emanual.robotis.com/docs/en/dxl/x/xl330-m288/|
-| XL330 Idler Wheel             | $10  | https://www.robotis.us/fpx330-h101-4pcs-set/   | |
+| 2x Dynamixel XL430-W250       | $100 | https://www.robotis.us/dynamixel-xl430-w250-t/ | https://emanual.robotis.com/docs/en/dxl/x/xl430-w250/ |
+| 4x Dynamixel XL330-M288       | $96  | https://www.robotis.us/dynamixel-xl330-m288-t/ | https://emanual.robotis.com/docs/en/dxl/x/xl330-m288/|
+| XL330 Idler Wheel             | $10  | https://www.robotis.us/fpx330-h101-4pcs-set/   | **Note**: pack of four; three needed for  longer version pictured above (with elbow to wrist extension), two needed for shorter version shown in the [assembly video](https://youtu.be/RckrXOEoWrk)|
 | XL430 Idler Wheel             | $7   | https://www.robotis.us/hn11-i101-set/          | |
-| Serial bus servo driver board | $10  | https://a.co/d/7C3RUYU                         | |
-| Voltage Reducer               | $4   | https://a.co/d/iWJlp6A                         | |
+| Waveshare Serial Bus Servo Driver Board | $10  | https://a.co/d/7C3RUYU                         | |
+| Voltage Reducer               | $10   | https://a.co/d/cy02ADW                         | **Note**: pack of six, only one needed per follower arm |
 | 12V Power Supply              | $12  | https://a.co/d/40o8uMN                         | |
 | Table Clamp                   | $6   | https://a.co/d/4KEiYdV                         | |
 | Wires                         | $7   | https://a.co/d/hQfk2cb                         | |
-| Total                         | $252 |                                                | |
+| Total                         | $258 |                                                | |
 
-There is usually a 10% discount code for the robotis shop. It might also help to add some grip tape to the gripper (e.g. https://a.co/d/dW7BnEN). A USB-C cable is necessary to connect the servo driver board to a computer.
+There is usually a 10% discount code for the Robotis shop. It might also help to add some grip tape to the gripper (e.g. https://a.co/d/dW7BnEN). A USB-C cable is necessary to connect the servo driver board to a computer.
+
 ![follower](./pictures/follower_arm.png)
 
-## Assembly
+### Assembly
 
 Video of the assembly: https://youtu.be/RckrXOEoWrk
 
@@ -37,16 +38,16 @@ Video of the assembly: https://youtu.be/RckrXOEoWrk
    1. The STL files are in `hardware/follower/stl`
    2. The parts are designed to be easy to print; only the moving part of the gripper needs supports
 2. Scanning motors
-   1. Connect the driver board to a computer (should work with Linux and macOS)
-   2. Figure out the device name (e.g. /dev/tty.usbmodem57380045631 for MacOS): ```ls /dev/tty.*```
+   1. Connect the driver board to a computer (should work with Linux and MacOS)
+   2. Figure out the device name (e.g. tty.usbmodem57380045631 for MacOS): ```ls /dev/tty.*```
    3. Scan each motor individually with [Dynamixel Wizard](https://emanual.robotis.com/docs/en/software/dynamixel/dynamixel_wizard2/)
       1. Set the baudrate to 1M for all motors
-      2. Set the servo ids to 1 for the shoulder to 5 (6 if using the elbow to write extension) for the gripper servo
+      2. Set the servo IDs to 1 for the shoulder to 5 (6 if using the elbow to wrist extension) for the gripper servo
 3. Assembly
    1. Assemble the arm without the base
       1. Make sure that the servos are fixed in the same position as in the CAD
       2. The servo horn should be in the default position when screwed in
-   2. Solder wires onto voltage reducer; nput should be connected to female connectors and the output to male connectors
+   2. Solder wires onto voltage reducer; input should be connected to female connectors and the output to male connectors
    3. Screw the voltage reducer and the servo driver board onto the base
    4. Screw the base onto the arm
    5. Connect D, V, and G ports on the driver board to the shoulder rotation servo
@@ -54,7 +55,7 @@ Video of the assembly: https://youtu.be/RckrXOEoWrk
    7. Connect the input for the voltage reducer to V and G ports on the driver board
    8. Connect the output of the voltage reducer and the remaining D port of the driver board to the elbow servo
    9. Connect the driver board to the power supply
-   10. Connect to an XL330 servo and view the input voltage, then adjust the screw on the voltage reducer until the input voltage is 5V
+   10. Connect to an XL330 servo and view the input voltage on Dynamixel Wizard, then adjust the screw on the voltage reducer until the input voltage is 5V
 
 ## Leader Arm
 
@@ -62,15 +63,17 @@ Video of the assembly: https://youtu.be/RckrXOEoWrk
 
 | Part                          | Cost | Buying link | Specs |
 |-------------------------------|------| --- | --- |
-| 6x Dynamixel xl330-w077       | $144 |  https://www.robotis.us/dynamixel-xl330-m077-t/ | https://emanual.robotis.com/docs/en/dxl/x/xl330-m077/|
-| XL330 Idler Wheel             | $10  | https://www.robotis.us/fpx330-h101-4pcs-set/   | |
-| Serial bus servo driver board | $10  | https://a.co/d/7C3RUYU | |
-| 5v Power Supply               | $6   | https://a.co/d/5u90NVp | |
-| Table Clamp                   | $6   | https://a.co/d/4KEiYdV | |
+| 6x Dynamixel XL330-W077       | $144 |  https://www.robotis.us/dynamixel-xl330-m077-t/ | https://emanual.robotis.com/docs/en/dxl/x/xl330-m077/|
 | XL330 Frame | $7   | https://www.robotis.us/fpx330-s101-4pcs-set/ | |
+| XL330 Idler Wheel             | $10  | https://www.robotis.us/fpx330-h101-4pcs-set/   | **Note**: pack of four; three needed for longer version (with elbow to wrist extension), two needed for shorter version pictured below |
+| Waveshare Serial Bus Servo Driver Board | $10  | https://a.co/d/7C3RUYU | |
+| 5V Power Supply               | $6   | https://a.co/d/5u90NVp | |
+| Table Clamp                   | $6   | https://a.co/d/4KEiYdV | |
 | Total                        | $183 | | |
 
 ![leader](./pictures/leader_arm.png)
 
+### Assembly
+
 The assembly of the leader arm is simpler since all motors use 5V. The gripper is replace by a handle and a trigger. During use, a small torque can be applied to the trigger so that it opens by default. The GELLO design uses a spring for this purpose but it is much more difficult to assemble.
-The teleoperation.py script can be used to test the arms. However, the device names might have to be adjusted.
+The `teleoperation.py` script can be used to test the arms. However, the device names might have to be adjusted.
