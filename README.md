@@ -17,7 +17,7 @@ The robot arm can be controlled with the Dynamixel SDK: ```pip install dynamixel
 |-------------------------------|------|------------------------------------------------| --- |
 | 2x Dynamixel XL430-W250       | $100 | https://www.robotis.us/dynamixel-xl430-w250-t/ | https://emanual.robotis.com/docs/en/dxl/x/xl430-w250/ |
 | 4x Dynamixel XL330-M288       | $96  | https://www.robotis.us/dynamixel-xl330-m288-t/ | https://emanual.robotis.com/docs/en/dxl/x/xl330-m288/|
-| XL330 Idler Wheel             | $10  | https://www.robotis.us/fpx330-h101-4pcs-set/   | **Note**: pack of four; three needed for  longer version pictured above (with elbow to wrist extension), two needed for shorter version shown in the [assembly video](https://youtu.be/RckrXOEoWrk)|
+| XL330 Idler Wheel             | $10  | https://www.robotis.us/fpx330-h101-4pcs-set/   | **Note**: pack of four; three needed for  longer version pictured above (with elbow-to-wrist extension), two needed for shorter version shown in the [assembly video](https://youtu.be/RckrXOEoWrk)|
 | XL430 Idler Wheel             | $7   | https://www.robotis.us/hn11-i101-set/          | |
 | Waveshare Serial Bus Servo Driver Board | $10  | https://a.co/d/7C3RUYU                         | |
 | Voltage Reducer               | $10   | https://a.co/d/cy02ADW                         | **Note**: pack of six, only one needed per follower arm |
@@ -42,7 +42,7 @@ Video of the assembly: https://youtu.be/RckrXOEoWrk
    2. Figure out the device name (e.g. tty.usbmodem57380045631 for MacOS): ```ls /dev/tty.*```
    3. Scan each motor individually with [Dynamixel Wizard](https://emanual.robotis.com/docs/en/software/dynamixel/dynamixel_wizard2/)
       1. Set the baudrate to 1M for all motors
-      2. Set the servo IDs to 1 for the shoulder to 5 (6 if using the elbow to wrist extension) for the gripper servo
+      2. Set the servo IDs to 1 for the shoulder to 5 (6 if using the elbow-to-wrist extension) for the gripper servo
 3. Assembly
    1. Assemble the arm without the base
       1. Make sure that the servos are fixed in the same position as in the CAD
@@ -65,7 +65,7 @@ Video of the assembly: https://youtu.be/RckrXOEoWrk
 |-------------------------------|------| --- | --- |
 | 6x Dynamixel XL330-W077       | $144 |  https://www.robotis.us/dynamixel-xl330-m077-t/ | https://emanual.robotis.com/docs/en/dxl/x/xl330-m077/|
 | XL330 Frame | $7   | https://www.robotis.us/fpx330-s101-4pcs-set/ | |
-| XL330 Idler Wheel             | $10  | https://www.robotis.us/fpx330-h101-4pcs-set/   | **Note**: pack of four; three needed for longer version (with elbow to wrist extension), two needed for shorter version pictured below |
+| XL330 Idler Wheel             | $10  | https://www.robotis.us/fpx330-h101-4pcs-set/   | **Note**: pack of four; three needed for longer version (with elbow-to-wrist extension), two needed for shorter version pictured below |
 | Waveshare Serial Bus Servo Driver Board | $10  | https://a.co/d/7C3RUYU | |
 | 5V Power Supply               | $6   | https://a.co/d/5u90NVp | |
 | Table Clamp                   | $6   | https://a.co/d/4KEiYdV | |
