@@ -77,3 +77,6 @@ Video of the assembly: https://youtu.be/RckrXOEoWrk
 
 The assembly of the leader arm is simpler since all motors use 5V. The gripper is replace by a handle and a trigger. During use, a small torque can be applied to the trigger so that it opens by default. The GELLO design uses a spring for this purpose but it is much more difficult to assemble.
 The `teleoperation.py` script can be used to test the arms. However, the device names might have to be adjusted.
+
+## Simulation
+A basic simulation environment in MuJoCo is available by running `simulation.py`.
