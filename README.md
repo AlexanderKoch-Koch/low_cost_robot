@@ -63,7 +63,7 @@ Video of the assembly: https://youtu.be/RckrXOEoWrk
 
 | Part                          | Cost | Buying link | Specs |
 |-------------------------------|------| --- | --- |
-| 6x Dynamixel XL330-W077       | $144 |  https://www.robotis.us/dynamixel-xl330-m077-t/ | https://emanual.robotis.com/docs/en/dxl/x/xl330-m077/|
+| 6x Dynamixel XL330-M077       | $144 |  https://www.robotis.us/dynamixel-xl330-m077-t/ | https://emanual.robotis.com/docs/en/dxl/x/xl330-m077/|
 | XL330 Frame | $7   | https://www.robotis.us/fpx330-s101-4pcs-set/ | |
 | XL330 Idler Wheel             | $10  | https://www.robotis.us/fpx330-h101-4pcs-set/   | **Note**: pack of four; three needed for longer version (with elbow-to-wrist extension), two needed for shorter version pictured below |
 | Waveshare Serial Bus Servo Driver Board | $10  | https://a.co/d/7C3RUYU | |
