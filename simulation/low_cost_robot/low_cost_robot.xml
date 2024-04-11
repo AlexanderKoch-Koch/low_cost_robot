@@ -61,7 +61,7 @@
                             
                             <!-- Rectangular pad for contact -->
                             <body name="joint4-pad">
-                                <geom type="box" condim="3" friction="0.7" mass="0" solimp="0.95 0.99 0.001" solref="0.004 1" name="static_finger_pad" size="0.006 0.006 0.006" pos="0.0135 0.192 0.1635" priority="1" rgba="0 0 0 0"/>
+                                <geom type="box" condim="3" friction="0.7" mass="0.01" solimp="0.95 0.99 0.001" solref="0.004 1" name="static_finger_pad" size="0.006 0.006 0.006" pos="0.0135 0.192 0.1635" priority="1" rgba="0 0 0 0"/>
                             </body>
                             
                             <body name="joint5">
@@ -70,7 +70,7 @@
                                 
                                 <!-- Rectangular pad for contact -->
                                 <body name="joint5-pad">
-                                    <geom type="box" condim="3" friction="0.7" mass="0" solimp="0.95 0.99 0.001" solref="0.004 1" name="moving_finger_pad" size="0.006 0.006 0.006" pos="-0.0007 0.192 0.1635" euler="0 0 -0.3" priority="1" rgba="0 0 0 0"/>
+                                    <geom type="box" condim="3" friction="0.7" mass="0.01" solimp="0.95 0.99 0.001" solref="0.004 1" name="moving_finger_pad" size="0.006 0.006 0.006" pos="-0.0007 0.192 0.1635" euler="0 0 -0.3" priority="1" rgba="0 0 0 0"/>
                                 </body>
 
                             </body>
