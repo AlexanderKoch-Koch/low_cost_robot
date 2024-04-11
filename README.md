@@ -100,6 +100,8 @@ You can now install the requirements:
 pip install -r requirements.txt
 ~~~
 
+Go to `config/config.py` and change the paths of the ports that connect leader and follower robots to your computer.
+
 ### Data collection
 In order to collect data simply run:
 ~~~
