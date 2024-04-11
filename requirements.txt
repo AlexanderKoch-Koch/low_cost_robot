@@ -1,1 +1,15 @@
+h5py
+tqdm
 mujoco
+pyyaml
+rospkg
+einops
+mediapy
+pexpect
+ipython
+packaging
+matplotlib
+pyquaternion
+opencv-python
+dynamixel-sdk
+git+https://github.com/Shaka-Labs/detr.git
