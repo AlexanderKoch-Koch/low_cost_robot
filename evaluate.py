@@ -43,9 +43,9 @@ if __name__ == "__main__":
     # load the policy
     ckpt_path = os.path.join(train_cfg['checkpoint_dir'], train_cfg['eval_ckpt_name'])
     policy = make_policy(policy_config['policy_class'], policy_config)
-    loading_status = policy.load_state_dict(torch.load(ckpt_path, map_location=torch.device('mps')))
+    loading_status = policy.load_state_dict(torch.load(ckpt_path, map_location=torch.device(device)))
     print(loading_status)
-    policy.to('mps')
+    policy.to(device)
     policy.eval()
 
     print(f'Loaded: {ckpt_path}')
