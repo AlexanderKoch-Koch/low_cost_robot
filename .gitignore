@@ -1,3 +1,15 @@
 .idea/
 .DS_Store
 __pycache__/
+
+# data
+*.hdf5
+
+# models checkpoint
+*.ckpt
+
+# pickle files
+*.pkl
+
+# videos
+*.mp4
