@@ -86,7 +86,7 @@ A basic simulation environment in MuJoCo is available by running `simulation.py`
 ### Setup
 Create conda environment
 ~~~
-conda create --name aloha python=3.9
+conda create --name act python=3.9
 conda activate aloha
 ~~~
 
