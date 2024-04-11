@@ -1,0 +1,96 @@
+<mujoco model="low_cost_robot">
+    <compiler angle="radian" meshdir="assets" texturedir="assets" autolimits="true"/>
+    <!-- The timestep has a big influence on the contacts stability -->
+    <option cone="elliptic" impratio="10" timestep="0.001"/>
+
+    <asset>
+        <mesh file="base_link.stl" scale="0.001 0.001 0.001"/>
+        <mesh file="first-bracket-motor_1.stl" scale="0.001 0.001 0.001"/>
+        <mesh file="shoulder-to-elbow-motor_v1_1.stl" scale="0.001 0.001 0.001"/>
+        <mesh file="elbow-to-wrist-motor-reference_v1_1.stl" scale="0.001 0.001 0.001"/>
+        <mesh file="gripper-static-motor-pt1.stl" scale="0.001 0.001 0.001"/>
+        <mesh file="gripper-static-motor-pt2.stl" scale="0.001 0.001 0.001"/>
+        <mesh file="gripper-moving-part-dumb_v2_1.stl" scale="0.001 0.001 0.001"/>
+    </asset>
+
+    <default>
+        <default class="low_cost_robot">
+            <general biastype="affine"/>
+            <!-- NOTE: the joint pos are defined in world frame, so they're built by summing over urdf relative joint positioning -->
+            <!-- NOTE: values other than axis and pos here have not been properly identified -->
+            <joint axis="0 1 0"/>
+            <default class="joint1">
+                <joint axis="0 0 1" pos="0.00025 0.06875 0.0409" range="-3.14158 3.14158" damping="0.1"/>
+                <position ctrlrange="-3.14158 3.14158" kp="25"/>
+            </default>
+            <default class="joint2">
+                <joint axis="1 0 0" pos="0.01945 0.06895 0.05515" range="-3.14158 3.14158" damping="0.1"/>
+                <position ctrlrange="-3.14158 3.14158" kp="25"/>
+            </default>
+            <default class="joint3">
+                <joint axis="1 0 0" pos="-0.0143 0.08375 0.16345" range="-3.14158 3.14158" damping="0.1"/>
+                <position ctrlrange="-3.14158 3.14158" kp="25"/>
+            </default>
+            <default class="joint4">
+                <joint axis="0 -1 0" pos="-0.000893 0.128688 0.163437" range="-3.14158 3.14158" damping="0.1"/>
+                <position ctrlrange="-3.14158 3.14158" kp="25"/>
+            </default>
+            <default class="joint5">
+                <joint axis="0 0 -1" pos="-0.008443 0.141678 0.177687" range="-2.45 0.032" damping="0.1"/>
+                <position ctrlrange="-2.45 0.032" kp="25"/>
+            </default>
+        </default>
+    </default>
+
+    <worldbody>
+        <body name="base_link">
+            <geom type="mesh" name="base_link" mesh="base_link" rgba="0.1 0.1 0.1 1"/>
+            <body name="joint1">
+                <joint name="joint1" class="joint1"/>
+                <geom type="mesh" name="joint1" mesh="first-bracket-motor_1" rgba="0.1 0.1 0.1 1"/>
+                <body name="joint2">
+                    <joint name="joint2" class="joint2"/>
+                    <geom type="mesh" name="joint2" mesh="shoulder-to-elbow-motor_v1_1" rgba="0.1 0.1 0.1 1"/>
+                    <body name="joint3">
+                        <joint name="joint3" class="joint3"/>
+                        <geom type="mesh" name="joint3" mesh="elbow-to-wrist-motor-reference_v1_1" rgba="0.1 0.1 0.1 1"/>
+                        <body name="joint4">
+                            <joint name="joint4" class="joint4"/>
+                            <geom type="mesh" name="joint4-pt1" mesh="gripper-static-motor-pt1" rgba="0.1 0.1 0.1 1"/>
+                            <geom type="mesh" name="joint4" mesh="gripper-static-motor-pt2" rgba="0.1 0.1 0.1 1" contype="0" conaffinity="0"/>
+                            
+                            <!-- Rectangular pad for contact -->
+                            <body name="joint4-pad">
+                                <geom type="box" condim="3" friction="0.7" mass="0" solimp="0.95 0.99 0.001" solref="0.004 1" name="static_finger_pad" size="0.006 0.006 0.006" pos="0.0135 0.192 0.1635" priority="1" rgba="0 0 0 0"/>
+                            </body>
+                            
+                            <body name="joint5">
+                                <joint name="joint5" class="joint5"/>
+                                <geom type="mesh" name="joint5" mesh="gripper-moving-part-dumb_v2_1" rgba="0.1 0.1 0.1 1" contype="0" conaffinity="0"/>
+                                
+                                <!-- Rectangular pad for contact -->
+                                <body name="joint5-pad">
+                                    <geom type="box" condim="3" friction="0.7" mass="0" solimp="0.95 0.99 0.001" solref="0.004 1" name="moving_finger_pad" size="0.006 0.006 0.006" pos="-0.0007 0.192 0.1635" euler="0 0 -0.3" priority="1" rgba="0 0 0 0"/>
+                                </body>
+
+                            </body>
+                            <!-- End effector frame in the middle of the two grippers -->
+                            <body>
+                                <geom type="sphere" name="end_effector" size="0.001" pos="-0.005 0.1935 0.1635" contype="0" conaffinity="0" rgba="0 0 0 0"/>
+                            </body>
+                        </body>
+                    </body>
+                </body>
+            </body>
+        </body>
+    </worldbody>
+
+    <actuator>
+        <position class="joint1" name="joint1" joint="joint1"/>
+        <position class="joint2" name="joint2" joint="joint2"/>
+        <position class="joint3" name="joint3" joint="joint3"/>
+        <position class="joint4" name="joint4" joint="joint4"/>
+        <position class="joint5" name="joint5" joint="joint5"/>
+    </actuator>
+
+</mujoco>
