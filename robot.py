@@ -14,11 +14,12 @@ class MotorControlType(Enum):
 
 
 class Robot:
-    # def __init__(self, device_name: str, baudrate=1_000_000, servo_ids=[1, 2, 3, 4, 5]):
-    def __init__(self, dynamixel, baudrate=1_000_000, servo_ids=[1, 2, 3, 4, 5]):
+    def __init__(self, device_name: str, baudrate=1_000_000, servo_ids=[1, 2, 3, 4, 5]) -> None:
         self.servo_ids = servo_ids
-        self.dynamixel = dynamixel
-        # self.dynamixel = Dynamixel.Config(baudrate=baudrate, device_name=device_name).instantiate()
+        self.dynamixel = Dynamixel.Config(baudrate=baudrate, device_name=device_name).instantiate()
+        self._init_motors()
+
+    def _init_motors(self):
         self.position_reader = GroupSyncRead(
             self.dynamixel.portHandler,
             self.dynamixel.packetHandler,
