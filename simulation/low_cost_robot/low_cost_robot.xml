@@ -44,17 +44,22 @@
 
     <worldbody>
         <body name="base_link">
+            <inertial pos="0 0 0" mass="0.0000001" diaginertia="0.0001 0.0001 0.0001"/>
             <geom type="mesh" name="base_link" mesh="base_link" rgba="0.1 0.1 0.1 1"/>
             <body name="joint1">
+                <inertial pos="0 0 0" mass="0.0000001" diaginertia="0.0001 0.0001 0.0001"/>
                 <joint name="joint1" class="joint1"/>
                 <geom type="mesh" name="joint1" mesh="first-bracket-motor_1" rgba="0.1 0.1 0.1 1"/>
                 <body name="joint2">
+                    <inertial pos="0 0 0" mass="0.0000001" diaginertia="0.0001 0.0001 0.0001"/>
                     <joint name="joint2" class="joint2"/>
                     <geom type="mesh" name="joint2" mesh="shoulder-to-elbow-motor_v1_1" rgba="0.1 0.1 0.1 1"/>
                     <body name="joint3">
+                        <inertial pos="0 0 0" mass="0.0000001" diaginertia="0.0001 0.0001 0.0001"/>
                         <joint name="joint3" class="joint3"/>
                         <geom type="mesh" name="joint3" mesh="elbow-to-wrist-motor-reference_v1_1" rgba="0.1 0.1 0.1 1"/>
                         <body name="joint4">
+                            <inertial pos="0 0 0" mass="0.0000001" diaginertia="0.0001 0.0001 0.0001"/>
                             <joint name="joint4" class="joint4"/>
                             <geom type="mesh" name="joint4-pt1" mesh="gripper-static-motor-pt1" rgba="0.1 0.1 0.1 1"/>
                             <geom type="mesh" name="joint4" mesh="gripper-static-motor-pt2" rgba="0.1 0.1 0.1 1" contype="0" conaffinity="0"/>
