@@ -18,6 +18,8 @@ class VRController:
         self.elbow_angle = 0.0  # Initial elbow angle
         self.wrist_angle = 0.0  # Initial wrist angle
         self.gripper_angle = 0.0  # Initial gripper angle
+        self.min_angle = -np.pi/2
+        self.max_angle = np.pi/2
 
     def start(self):
         openvr.init(openvr.VRApplication_Other)
@@ -123,6 +125,12 @@ class VRController:
                         _, _, self.wrist_angle = self.rotation_matrix_to_euler_angles(rotation)
 
     def read_position(self):
+        # make sure each angle is in the range [self.min_angle, self.max_angle] for safety
+        self.base_angle = np.clip(self.base_angle, self.min_angle, self.max_angle)
+        self.shoulder_angle = np.clip(self.shoulder_angle, self.min_angle, self.max_angle)
+        self.elbow_angle = np.clip(self.elbow_angle, self.min_angle, self.max_angle)
+        self.wrist_angle = np.clip(self.wrist_angle, self.min_angle, self.max_angle)
+        self.gripper_angle = np.clip(self.gripper_angle, self.min_angle, self.max_angle)
         return self.base_angle, self.shoulder_angle, self.elbow_angle, self.wrist_angle, self.gripper_angle
 
 if __name__ == "__main__":
