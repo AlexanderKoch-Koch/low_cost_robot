@@ -28,6 +28,8 @@ The robot arm can be controlled with the Dynamixel SDK: ```pip install dynamixel
 
 There is usually a 10% discount code for the Robotis shop. It might also help to add some grip tape to the gripper (e.g. https://a.co/d/dW7BnEN). A USB-C cable is necessary to connect the servo driver board to a computer.
 
+For europeans, the buying links above might not be able to ship to your country. In that case, check the [EU version](LINKS_EU.md).
+
 ![follower](./pictures/follower_arm.png)
 
 ### Assembly
