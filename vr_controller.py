@@ -33,7 +33,7 @@ class VRController:
 
     def get_controller_poses(self):
         poses = openvr.VRSystem().getDeviceToAbsoluteTrackingPose(
-            openvr.TrackingUniverseStanding, 0.0, openvr.k_unMaxTrackedDeviceCount)
+            openvr.TrackingUniverseStanding, 0.05, openvr.k_unMaxTrackedDeviceCount)
         return poses
 
     # Function to calculate joint angles
