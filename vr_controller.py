@@ -33,7 +33,7 @@ class VRController:
 
     def get_controller_poses(self):
         poses = openvr.VRSystem().getDeviceToAbsoluteTrackingPose(
-            openvr.TrackingUniverseStanding, 0.05, openvr.k_unMaxTrackedDeviceCount)
+            openvr.TrackingUniverseStanding, 0.0, openvr.k_unMaxTrackedDeviceCount)
         return poses
 
     # Function to calculate joint angles
@@ -131,6 +131,13 @@ class VRController:
         self.elbow_angle = np.clip(self.elbow_angle, self.min_angle, self.max_angle)
         self.wrist_angle = np.clip(self.wrist_angle, self.min_angle, self.max_angle)
         self.gripper_angle = np.clip(self.gripper_angle, self.min_angle, self.max_angle)
+        # print all angles
+        # print(f'Base angle: {self.base_angle}')
+        # print(f'Shoulder angle: {self.shoulder_angle}')
+        # print(f'Elbow angle: {self.elbow_angle}')
+        # print(f'Wrist angle: {self.wrist_angle}')
+        # print(f'Gripper angle: {self.gripper_angle}')
+        
         return self.base_angle, self.shoulder_angle, self.elbow_angle, self.wrist_angle, self.gripper_angle
 
 if __name__ == "__main__":
