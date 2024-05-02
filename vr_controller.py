@@ -1,11 +1,16 @@
 import openvr
 import numpy as np
-import math
 import threading
-import time
 
 class VRController:
     def __init__(self, L1=0.0239, L2=0.1144, L3=0.0469+0.0207):
+        """
+        Initialize the VR controller
+        Parameters:
+            L1: base to shoulder
+            L2: shoulder to elbow
+            L3: elbow to wrist
+        """
         self.scale = 5
         self.L1 = L1*self.scale  # Length of the first arm segment
         self.L2 = L2*self.scale  # Length of the second arm segment
@@ -18,8 +23,8 @@ class VRController:
         self.elbow_angle = 0.0  # Initial elbow angle
         self.wrist_angle = 0.0  # Initial wrist angle
         self.gripper_angle = 0.0  # Initial gripper angle
-        self.min_angle = -np.pi/2
-        self.max_angle = np.pi/2
+        self.min_angle = -np.pi/2 # Minimum angle for each joint
+        self.max_angle = np.pi/2 # Maximum angle for each joint
 
     def start(self):
         openvr.init(openvr.VRApplication_Other)
@@ -32,12 +37,26 @@ class VRController:
         print("OpenVR shutdown")
 
     def get_controller_poses(self):
+        """
+        Get the poses of all connected controllers
+        """
+        predicted_seconds_to_position = 0.05
         poses = openvr.VRSystem().getDeviceToAbsoluteTrackingPose(
-            openvr.TrackingUniverseStanding, 0.05, openvr.k_unMaxTrackedDeviceCount)
+            openvr.TrackingUniverseStanding, predicted_seconds_to_position, openvr.k_unMaxTrackedDeviceCount)
         return poses
 
-    # Function to calculate joint angles
-    def calculate_joint_angles(self, x, y, z):
+    def calculate_joint_angles(self, x: float, y: float, z: float):
+        """
+        Calculate the joint angles for the robot arm
+        Parameters:
+            x: x position of the end effector
+            y: y position of the end effector
+            z: z position of the end effector
+        Returns:
+            q1: Base angle
+            q2: Shoulder angle
+            q3: Elbow angle
+        """
         q1 = np.arctan2(y, x)
         x_prime = np.sqrt(x**2 + y**2)
         z_prime = -z + self.L1
@@ -52,7 +71,14 @@ class VRController:
         q2 = np.arctan2(sin_q2, cos_q2)
         return q1, q2, q3
 
-    def get_trigger_value(self, controller_index):
+    def get_trigger_value(self, controller_index: int):
+        """
+        Get the value of the trigger button on the controller
+        Parameters:
+            controller_index: Index of the controller
+        Returns:
+            trigger_value: Value of the trigger button
+        """
         # Get the state of the controller
         _, result = openvr.VRSystem().getControllerState(controller_index)
         # Check if the call was successful
@@ -78,7 +104,16 @@ class VRController:
                 pose_matrix[i, j] = matrix[i][j]
         return pose_matrix
 
-    def rotation_matrix_to_euler_angles(self, R):
+    def rotation_matrix_to_euler_angles(self, R: np.ndarray):
+        """
+        Convert a 3x3 rotation matrix to Euler angles
+        Parameters:
+            R: 3x3 rotation matrix
+        Returns:
+            x: Roll angle
+            y: Pitch angle
+            z: Yaw angle
+        """
         # Ensure the input matrix is 3x3
         assert(R.shape == (3, 3))
         
@@ -125,18 +160,15 @@ class VRController:
                         _, _, self.wrist_angle = self.rotation_matrix_to_euler_angles(rotation)
 
     def read_position(self):
+        """
+        Read the position of the VR controller
+        """
         # make sure each angle is in the range [self.min_angle, self.max_angle] for safety
         self.base_angle = np.clip(self.base_angle, self.min_angle, self.max_angle)
         self.shoulder_angle = np.clip(self.shoulder_angle, self.min_angle, self.max_angle)
         self.elbow_angle = np.clip(self.elbow_angle, self.min_angle, self.max_angle)
         self.wrist_angle = np.clip(self.wrist_angle, self.min_angle, self.max_angle)
         self.gripper_angle = np.clip(self.gripper_angle, self.min_angle, self.max_angle)
-        # print all angles
-        # print(f'Base angle: {self.base_angle}')
-        # print(f'Shoulder angle: {self.shoulder_angle}')
-        # print(f'Elbow angle: {self.elbow_angle}')
-        # print(f'Wrist angle: {self.wrist_angle}')
-        # print(f'Gripper angle: {self.gripper_angle}')
         
         return self.base_angle, self.shoulder_angle, self.elbow_angle, self.wrist_angle, self.gripper_angle
 
