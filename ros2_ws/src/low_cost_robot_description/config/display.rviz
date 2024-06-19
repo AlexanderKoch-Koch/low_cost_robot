@@ -135,7 +135,7 @@ Visualization Manager:
           Value: true
         front_wheel_right_2:
           Value: true
-      Marker Scale: 0.5
+      Marker Scale: 0.2
       Name: TF
       Show Arrows: true
       Show Axes: true
