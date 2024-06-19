@@ -10,11 +10,13 @@ The usage 1. and 2. are mainly generated using [`fusion2urdf-ros2`](https://gith
     ```shell
     ros2 launch low_cost_robot_description display.launch.py
     ```
+    ![usage_rviz](./pictures/usage_rviz.png)
 
 2. Show the `low_cost_robot` robot arm (follower) in `Gazebo`:
     ```shell
     ros2 launch low_cost_robot_description gazebo.launch.py
     ```
+    ![usage_gazebo](./pictures/usage_gazebo.png)
 
 3. The `URDF` file `low_cost_robot.urdf` is located at `ros2_ws/src/low_cost_robot_description/urdf/low_cost_robot.urdf`.
 
