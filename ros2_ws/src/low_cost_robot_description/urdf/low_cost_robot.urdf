@@ -122,14 +122,14 @@
     <visual>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="file:///home/tc-huang/Desktop/GitHub/low_cost_robot/ros2_ws/install/low_cost_robot_description/share/low_cost_robot_description/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+        <mesh filename="file://$(find low_cost_robot_description)/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
       </geometry>
       <material name="silver"/>
     </visual>
     <collision>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="file:///home/tc-huang/Desktop/GitHub/low_cost_robot/ros2_ws/install/low_cost_robot_description/share/low_cost_robot_description/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+        <mesh filename="file://$(find low_cost_robot_description)/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
       </geometry>
     </collision>
   </link>
@@ -142,14 +142,14 @@
     <visual>
       <origin rpy="0 0 0" xyz="-0.0 -0.0 -0.039"/>
       <geometry>
-        <mesh filename="file:///home/tc-huang/Desktop/GitHub/low_cost_robot/ros2_ws/install/low_cost_robot_description/share/low_cost_robot_description/meshes/link1_1.stl" scale="0.001 0.001 0.001"/>
+        <mesh filename="file://$(find low_cost_robot_description)/meshes/link1_1.stl" scale="0.001 0.001 0.001"/>
       </geometry>
       <material name="silver"/>
     </visual>
     <collision>
       <origin rpy="0 0 0" xyz="-0.0 -0.0 -0.039"/>
       <geometry>
-        <mesh filename="file:///home/tc-huang/Desktop/GitHub/low_cost_robot/ros2_ws/install/low_cost_robot_description/share/low_cost_robot_description/meshes/link1_1.stl" scale="0.001 0.001 0.001"/>
+        <mesh filename="file://$(find low_cost_robot_description)/meshes/link1_1.stl" scale="0.001 0.001 0.001"/>
       </geometry>
     </collision>
   </link>
@@ -162,14 +162,14 @@
     <visual>
       <origin rpy="0 0 0" xyz="0.0002 0.0 -0.0563"/>
       <geometry>
-        <mesh filename="file:///home/tc-huang/Desktop/GitHub/low_cost_robot/ros2_ws/install/low_cost_robot_description/share/low_cost_robot_description/meshes/link2_1.stl" scale="0.001 0.001 0.001"/>
+        <mesh filename="file://$(find low_cost_robot_description)/meshes/link2_1.stl" scale="0.001 0.001 0.001"/>
       </geometry>
       <material name="silver"/>
     </visual>
     <collision>
       <origin rpy="0 0 0" xyz="0.0002 0.0 -0.0563"/>
       <geometry>
-        <mesh filename="file:///home/tc-huang/Desktop/GitHub/low_cost_robot/ros2_ws/install/low_cost_robot_description/share/low_cost_robot_description/meshes/link2_1.stl" scale="0.001 0.001 0.001"/>
+        <mesh filename="file://$(find low_cost_robot_description)/meshes/link2_1.stl" scale="0.001 0.001 0.001"/>
       </geometry>
     </collision>
   </link>
@@ -182,14 +182,14 @@
     <visual>
       <origin rpy="0 0 0" xyz="-5e-05 -0.014791 -0.164647"/>
       <geometry>
-        <mesh filename="file:///home/tc-huang/Desktop/GitHub/low_cost_robot/ros2_ws/install/low_cost_robot_description/share/low_cost_robot_description/meshes/link3_1.stl" scale="0.001 0.001 0.001"/>
+        <mesh filename="file://$(find low_cost_robot_description)/meshes/link3_1.stl" scale="0.001 0.001 0.001"/>
       </geometry>
       <material name="silver"/>
     </visual>
     <collision>
       <origin rpy="0 0 0" xyz="-5e-05 -0.014791 -0.164647"/>
       <geometry>
-        <mesh filename="file:///home/tc-huang/Desktop/GitHub/low_cost_robot/ros2_ws/install/low_cost_robot_description/share/low_cost_robot_description/meshes/link3_1.stl" scale="0.001 0.001 0.001"/>
+        <mesh filename="file://$(find low_cost_robot_description)/meshes/link3_1.stl" scale="0.001 0.001 0.001"/>
       </geometry>
     </collision>
   </link>
@@ -202,14 +202,14 @@
     <visual>
       <origin rpy="0 0 0" xyz="-0.000175 -0.105258 -0.167394"/>
       <geometry>
-        <mesh filename="file:///home/tc-huang/Desktop/GitHub/low_cost_robot/ros2_ws/install/low_cost_robot_description/share/low_cost_robot_description/meshes/link4_1.stl" scale="0.001 0.001 0.001"/>
+        <mesh filename="file://$(find low_cost_robot_description)/meshes/link4_1.stl" scale="0.001 0.001 0.001"/>
       </geometry>
       <material name="silver"/>
     </visual>
     <collision>
       <origin rpy="0 0 0" xyz="-0.000175 -0.105258 -0.167394"/>
       <geometry>
-        <mesh filename="file:///home/tc-huang/Desktop/GitHub/low_cost_robot/ros2_ws/install/low_cost_robot_description/share/low_cost_robot_description/meshes/link4_1.stl" scale="0.001 0.001 0.001"/>
+        <mesh filename="file://$(find low_cost_robot_description)/meshes/link4_1.stl" scale="0.001 0.001 0.001"/>
       </geometry>
     </collision>
   </link>
@@ -222,14 +222,14 @@
     <visual>
       <origin rpy="0 0 0" xyz="-0.001528 -0.105265 -0.122394"/>
       <geometry>
-        <mesh filename="file:///home/tc-huang/Desktop/GitHub/low_cost_robot/ros2_ws/install/low_cost_robot_description/share/low_cost_robot_description/meshes/gripper_static_1.stl" scale="0.001 0.001 0.001"/>
+        <mesh filename="file://$(find low_cost_robot_description)/meshes/gripper_static_1.stl" scale="0.001 0.001 0.001"/>
       </geometry>
       <material name="silver"/>
     </visual>
     <collision>
       <origin rpy="0 0 0" xyz="-0.001528 -0.105265 -0.122394"/>
       <geometry>
-        <mesh filename="file:///home/tc-huang/Desktop/GitHub/low_cost_robot/ros2_ws/install/low_cost_robot_description/share/low_cost_robot_description/meshes/gripper_static_1.stl" scale="0.001 0.001 0.001"/>
+        <mesh filename="file://$(find low_cost_robot_description)/meshes/gripper_static_1.stl" scale="0.001 0.001 0.001"/>
       </geometry>
     </collision>
   </link>
@@ -242,14 +242,14 @@
     <visual>
       <origin rpy="0 0 0" xyz="0.005872 -0.105015 -0.109244"/>
       <geometry>
-        <mesh filename="file:///home/tc-huang/Desktop/GitHub/low_cost_robot/ros2_ws/install/low_cost_robot_description/share/low_cost_robot_description/meshes/gripper_moving_1.stl" scale="0.001 0.001 0.001"/>
+        <mesh filename="file://$(find low_cost_robot_description)/meshes/gripper_moving_1.stl" scale="0.001 0.001 0.001"/>
       </geometry>
       <material name="silver"/>
     </visual>
     <collision>
       <origin rpy="0 0 0" xyz="0.005872 -0.105015 -0.109244"/>
       <geometry>
-        <mesh filename="file:///home/tc-huang/Desktop/GitHub/low_cost_robot/ros2_ws/install/low_cost_robot_description/share/low_cost_robot_description/meshes/gripper_moving_1.stl" scale="0.001 0.001 0.001"/>
+        <mesh filename="file://$(find low_cost_robot_description)/meshes/gripper_moving_1.stl" scale="0.001 0.001 0.001"/>
       </geometry>
     </collision>
   </link>
