@@ -6,7 +6,7 @@
 - Since `ROS 2` is more natively supported on the `Ubuntu` platform, all instructions and commands in the `README.md` under the `ros2_ws` directory are for Ubuntu. If you use the `MacOS` platform, instructions and commands may be different.
 
 ## `ROS 2` Package List in This Workspace
-1. **low_cost_robot_description**: This package is for the URDF of the robot arm (follower).
+1. [**low_cost_robot_description**](./src/low_cost_robot_description/README.md): This package is for the URDF of the robot arm (follower).
 
 ## Prerequisites
 1. `ROS 2` installed (You can refer to this [document](https://docs.ros.org/en/humble/Installation.html) to install `ROS 2` Humble Hawksbill or another `ROS 2` [distribution](https://docs.ros.org/en/humble/Releases.html).)
