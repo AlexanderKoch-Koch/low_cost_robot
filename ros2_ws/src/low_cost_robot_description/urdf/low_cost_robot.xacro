@@ -1,0 +1,196 @@
+<?xml version="1.0" ?>
+<robot name="low_cost_robot" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+<xacro:include filename="$(find low_cost_robot_description)/urdf/materials.xacro" />
+<xacro:include filename="$(find low_cost_robot_description)/urdf/low_cost_robot.trans" />
+<xacro:include filename="$(find low_cost_robot_description)/urdf/low_cost_robot.gazebo" />
+<link name="base_link">
+  <inertial>
+    <origin xyz="-0.00017023202404845418 -0.021341439639662032 0.014423161616418092" rpy="0 0 0"/>
+    <mass value="0.5164575020815119"/>
+    <inertia ixx="0.000304" iyy="0.000283" izz="0.000441" ixy="-2e-06" iyz="-6.2e-05" ixz="-1e-06"/>
+  </inertial>
+  <visual>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find low_cost_robot_description)/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find low_cost_robot_description)/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="link1_1">
+  <inertial>
+    <origin xyz="-0.0006216635769899589 -0.011914175885676576 0.015400174574576098" rpy="0 0 0"/>
+    <mass value="0.3956063453928257"/>
+    <inertia ixx="0.000112" iyy="7.5e-05" izz="0.000123" ixy="0.0" iyz="-1e-06" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.0 -0.0 -0.039" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find low_cost_robot_description)/meshes/link1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.0 -0.0 -0.039" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find low_cost_robot_description)/meshes/link1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="link2_1">
+  <inertial>
+    <origin xyz="0.00015778948024297947 -0.0012168309893684582 0.07161179945761596" rpy="0 0 0"/>
+    <mass value="0.3916070272991037"/>
+    <inertia ixx="0.00052" iyy="0.000534" izz="8.4e-05" ixy="-1e-06" iyz="-3.7e-05" ixz="-2e-06"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.0002 0.0 -0.0563" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find low_cost_robot_description)/meshes/link2_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.0002 0.0 -0.0563" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find low_cost_robot_description)/meshes/link2_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="link3_1">
+  <inertial>
+    <origin xyz="7.243666489899892e-05 0.05069893196527342 0.002850799344132765" rpy="0 0 0"/>
+    <mass value="0.4404689720232285"/>
+    <inertia ixx="0.000302" iyy="5.5e-05" izz="0.000322" ixy="-1e-06" iyz="-0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-5e-05 -0.014791 -0.164647" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find low_cost_robot_description)/meshes/link3_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-5e-05 -0.014791 -0.164647" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find low_cost_robot_description)/meshes/link3_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="link4_1">
+  <inertial>
+    <origin xyz="-0.00473855751324301 8.608301182447264e-06 -0.02657822907239915" rpy="0 0 0"/>
+    <mass value="0.15464443104629289"/>
+    <inertia ixx="2.4e-05" iyy="3.9e-05" izz="2.4e-05" ixy="0.0" iyz="0.0" ixz="-3e-06"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.000175 -0.105258 -0.167394" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find low_cost_robot_description)/meshes/link4_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.000175 -0.105258 -0.167394" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find low_cost_robot_description)/meshes/link4_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="gripper_static_1">
+  <inertial>
+    <origin xyz="0.005441113698877747 0.00011563276687967528 -0.019052234932530082" rpy="0 0 0"/>
+    <mass value="0.23008611256824127"/>
+    <inertia ixx="6.9e-05" iyy="8.4e-05" izz="4.3e-05" ixy="-0.0" iyz="0.0" ixz="1.8e-05"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.001528 -0.105265 -0.122394" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find low_cost_robot_description)/meshes/gripper_static_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.001528 -0.105265 -0.122394" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find low_cost_robot_description)/meshes/gripper_static_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="gripper_moving_1">
+  <inertial>
+    <origin xyz="0.0010956016218150169 0.00031090398683926435 -0.02511314835420593" rpy="0 0 0"/>
+    <mass value="0.10060550172576842"/>
+    <inertia ixx="2.7e-05" iyy="1.9e-05" izz="1.2e-05" ixy="-0.0" iyz="0.0" ixz="2e-06"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.005872 -0.105015 -0.109244" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find low_cost_robot_description)/meshes/gripper_moving_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.005872 -0.105015 -0.109244" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find low_cost_robot_description)/meshes/gripper_moving_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<joint name="joint1" type="continuous">
+  <origin xyz="0.0 0.0 0.039" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="link1_1"/>
+  <axis xyz="0.0 0.0 1.0"/>
+</joint>
+
+<joint name="joint2" type="continuous">
+  <origin xyz="-0.0002 -0.0 0.0173" rpy="0 0 0"/>
+  <parent link="link1_1"/>
+  <child link="link2_1"/>
+  <axis xyz="-1.0 -0.0 0.0"/>
+</joint>
+
+<joint name="joint3" type="continuous">
+  <origin xyz="0.00025 0.014791 0.108347" rpy="0 0 0"/>
+  <parent link="link2_1"/>
+  <child link="link3_1"/>
+  <axis xyz="1.0 0.0 0.0"/>
+</joint>
+
+<joint name="joint4" type="continuous">
+  <origin xyz="0.000125 0.090467 0.002747" rpy="0 0 0"/>
+  <parent link="link3_1"/>
+  <child link="link4_1"/>
+  <axis xyz="1.0 0.0 0.0"/>
+</joint>
+
+<joint name="joint5" type="continuous">
+  <origin xyz="0.001353 7e-06 -0.045" rpy="0 0 0"/>
+  <parent link="link4_1"/>
+  <child link="gripper_static_1"/>
+  <axis xyz="0.0 0.0 -1.0"/>
+</joint>
+
+<joint name="joint_gripper" type="continuous">
+  <origin xyz="-0.0074 -0.00025 -0.01315" rpy="0 0 0"/>
+  <parent link="gripper_static_1"/>
+  <child link="gripper_moving_1"/>
+  <axis xyz="-0.0 -1.0 -0.0"/>
+</joint>
+
+</robot>
