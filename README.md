@@ -1,4 +1,4 @@
-# Low-Cost Robot Arm by Tau Robotics
+# Low-Cost Robot Arm
 Join the waitlist here to get all the parts in one package: https://tau-robotics.com/robots
 
 This repository contains the files to build and control a low-cost robot arm that costs about $250. You can also build a second robot arm (the leader arm) to control the other arm (the follower arm) that costs about $180, for a total of $430. The design of the leader is inspired by the [GELLO project](https://github.com/wuphilipp/gello_mechanical) but is simpler to build. Such a robot arm is well suited for [robot learning](https://x.com/alexkoch_ai/status/1756500716854841835?s=20). Two of those arms are also capable of [folding clothes](https://x.com/alexkoch_ai/status/1772750496174149708?s=20).
