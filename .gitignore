@@ -1,3 +1,8 @@
 .idea/
 .DS_Store
 __pycache__/
+
+# For ROS 2 workspace
+ros2_ws/build
+ros2_ws/log
+ros2_ws/install
